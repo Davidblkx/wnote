@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>WNote - Whatsapp as personal notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="content"></body>
+    <h1>WNote <small> - whatsapp as personal notes</small> </h1>
+
+    <p class="inputs">Did you know you can use WhatsApp as a personal notes app? Just add your own number, pin the chat, and send messages to it whenever you want to save a note. You can also use it to share notes across your devices.</p>
+    <p class="inputs">Enter your number below in the international format (without the leading 00 or +), press 'Generate Link,' and use the QR code or link to open it in WhatsApp</p>
+
+    <form class="group inputs" action="./index.html">
+        <label for="phone">Phone number (eg 351930000000)</label>
+        <input type="text" id="phone" name="phone" required>
+        <button class="btn submit" type="submit">Generate link</button>
+    </form>
+
+    <div class="group show qrcode">
+        <div id="qrcode"></div>
+    </div>
+
+    <div class="group show">
+        <a id="w_link" href="https://wa.me/351930000000">
+            <img src="wbtn.svg" alt="Whatsapp logo">
+        </a>
+    </div>
+
+    <div class="group show">
+        <a href="./index.html"><button class="btn">New number</button></a>
+    </div>
+
+    <script src="qrcode.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
